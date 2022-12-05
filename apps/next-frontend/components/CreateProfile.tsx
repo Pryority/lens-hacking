@@ -1,12 +1,15 @@
 import { useCreateProfile } from '@lenskit/react'
 import { Button, Stack } from '@mantine/core'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Alert, Card, Input, Title } from '@mantine/core'
 
 export default function CreateProfile(): JSX.Element {
   const { createProfile, profileId, loading, error } = useCreateProfile()
-  const [handle, setHandle] = useState('')
+  const [handle, setHandle] = useState("")
+  const [profile, setProfile] = useState("")
+
+  const create = () => createProfile(handle);
 
   return (
     <Card p="lg" radius="md" withBorder>
@@ -23,7 +26,7 @@ export default function CreateProfile(): JSX.Element {
           variant="gradient"
           gradient={{ from: 'lime', to: 'cyan', deg: 45 }}
           loading={loading}
-          onClick={() => createProfile(handle)}
+          onClick={create}
         >
           Create
         </Button>

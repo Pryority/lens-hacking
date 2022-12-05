@@ -1,5 +1,5 @@
 {
-  "name": "playground-react",
+  "name": "next-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
+    "@heroicons/react": "^2.0.13",
     "@lenskit/react": "*",
     "@mantine/carousel": "^5.9.1",
     "@mantine/core": "^5.9.1",
@@ -36,8 +37,8 @@
     "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
     "typescript": "4.8.4"
   }
 }

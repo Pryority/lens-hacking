@@ -309,6 +309,7 @@ export type Comment = {
   commentOn?: Maybe<Publication>;
   /** The date the post was created on */
   createdAt: Scalars['DateTime'];
+  dataAvailabilityProofs?: Maybe<Scalars['String']>;
   /** This will bring back the first comment of a comment and only be defined if using `publication` query and `commentOf` */
   firstComment?: Maybe<Comment>;
   hasCollectedByMe: Scalars['Boolean'];
@@ -316,6 +317,8 @@ export type Comment = {
   hidden: Scalars['Boolean'];
   /** The internal publication id */
   id: Scalars['InternalPublicationId'];
+  /** Indicates if the publication is data availability post */
+  isDataAvailability: Scalars['Boolean'];
   /** Indicates if the publication is gated behind some access criteria */
   isGated: Scalars['Boolean'];
   /** The top level post/mirror this comment lives on */
@@ -1760,11 +1763,14 @@ export type Mirror = {
   collectNftAddress?: Maybe<Scalars['ContractAddress']>;
   /** The date the post was created on */
   createdAt: Scalars['DateTime'];
+  dataAvailabilityProofs?: Maybe<Scalars['String']>;
   hasCollectedByMe: Scalars['Boolean'];
   /** If the publication has been hidden if it has then the content and media is not available */
   hidden: Scalars['Boolean'];
   /** The internal publication id */
   id: Scalars['InternalPublicationId'];
+  /** Indicates if the publication is data availability post */
+  isDataAvailability: Scalars['Boolean'];
   /** Indicates if the publication is gated behind some access criteria */
   isGated: Scalars['Boolean'];
   /** The metadata for the post */
@@ -2433,11 +2439,14 @@ export type Post = {
   collectedBy?: Maybe<Wallet>;
   /** The date the post was created on */
   createdAt: Scalars['DateTime'];
+  dataAvailabilityProofs?: Maybe<Scalars['String']>;
   hasCollectedByMe: Scalars['Boolean'];
   /** If the publication has been hidden if it has then the content and media is not available */
   hidden: Scalars['Boolean'];
   /** The internal publication id */
   id: Scalars['InternalPublicationId'];
+  /** Indicates if the publication is data availability post */
+  isDataAvailability: Scalars['Boolean'];
   /** Indicates if the publication is gated behind some access criteria */
   isGated: Scalars['Boolean'];
   /** The metadata for the post */
