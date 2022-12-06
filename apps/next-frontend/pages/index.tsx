@@ -91,25 +91,25 @@ export default function Home() {
                     </div>
                     <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.docs} className="card-option-text">
+                        <Link href={client.docs} className="card-option-text">
                           {"Documentation"}
-                        </a>
+                        </Link>
                         <BookOpenIcon className="h-4 w-4" />
                       </div>
                     </div>
                     <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.status} className="card-option-text">
+                        <Link href={client.status} className="card-option-text">
                           {"Status"}
-                        </a>
+                        </Link>
                         <ClipboardDocumentIcon className="h-4 w-4" />
                       </div>
                     </div>
                     <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.contact} className="card-option-text">
+                        <Link href={client.contact} className="card-option-text">
                           {"Contact"}
-                        </a>
+                        </Link>
                         <ChatBubbleLeftRightIcon className="h-4 w-4" />
                       </div>
                     </div>

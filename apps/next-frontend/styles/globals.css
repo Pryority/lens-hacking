@@ -10,7 +10,7 @@
     @apply relative flex items-center justify-start font-medium transition-all duration-150 ease-in-out hover:scale-[1.02] sm:text-xl md:justify-start md:text-2xl;
   }
   .card-option-text {
-    @apply no-underline;
+    @apply text-violet-500 no-underline visited:text-violet-500;
   }
 }
 
