@@ -62,15 +62,15 @@ export default function Home() {
                 key={i}
                 className="col-span-2 flex h-full flex-col items-center justify-center p-2 sm:col-span-1"
               >
-                <div className="relative flex h-full w-full flex-col items-start justify-center overflow-clip rounded border border-zinc-200 bg-zinc-200/20 p-4 backdrop-blur-lg">
-                  <div className="relative flex justify-center w-full">
+                <div className="relative flex h-full w-full flex-col items-start justify-between overflow-clip rounded border border-zinc-200 bg-zinc-200/20 p-4 backdrop-blur-lg">
+                  <div className="relative flex justify-center w-full items-center">
                     <img
                       src={client.img}
                       alt=""
                       className={
                         client.name == "Geth"
                           ? "object-fit absolute top-0 left-0 z-[-10] flex h-[50vh] scale-50 opacity-75"
-                          : "object-fit absolute top-0 left-4 z-[-10] opacity-75"
+                          : "object-contain absolute top-0 left-4 z-[-10] opacity-75"
                       }
                     />
                   </div>
@@ -111,7 +111,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="py-4 flex w-full">
+                  {/* <div className="py-4 flex w-full">
                     <div className="outline p-2 rounded-sm flex w-full">
                       <Text
                         sx={{ fontFamily: "Greycliff CF, sans-serif" }}
@@ -120,7 +120,7 @@ export default function Home() {
                         <p className="font-medium text-base leading-[18px] m-0 flex break-all h-fit">{client.installation}</p>
                       </Text>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex w-full items-center justify-center z-20">
                     <Text
                       sx={{ fontFamily: "Greycliff CF, sans-serif" }}
@@ -128,7 +128,7 @@ export default function Home() {
                     >
                       <div className="flex items-center text-xs">
                         <div className="flex">
-                          <a href={client.donate} className="font-medium tracking-wider text-2xl uppercase no-underline">
+                          <a href={client.donate} className="font-medium pt-2 sm:pt-4 md:pt-8 tracking-wider text-base sm:text-lg md:text-2xl uppercase no-underline">
                             {"Donate"}
                           </a>
                         </div>
