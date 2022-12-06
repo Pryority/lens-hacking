@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .client-name {
+    @apply bg-gradient-to-bl from-violet-500 via-purple-500 to-blue-500 bg-clip-text text-4xl font-extralight uppercase tracking-tighter text-transparent sm:text-5xl md:text-6xl;
+  }
+  .card-option {
+    @apply relative flex items-center justify-start font-medium transition-all duration-150 ease-in-out hover:scale-[1.02] sm:text-xl md:justify-start md:text-2xl;
+  }
+  .card-option-text {
+    @apply no-underline;
+  }
+}
+
 a:visited {
   @apply font-medium text-purple-500;
 }

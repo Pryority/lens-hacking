@@ -14,7 +14,7 @@ import {
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { IconBook, IconMoonStars, IconSun } from "@tabler/icons";
 import { useState } from "react";
-import { BookOpenIcon, ChatBubbleLeftRightIcon, CodeBracketIcon } from "@heroicons/react/24/solid";
+import { BookOpenIcon, ChatBubbleLeftRightIcon, ClipboardDocumentIcon, CodeBracketIcon } from "@heroicons/react/24/solid";
 import { ExecutionBear } from "../components/ExecutionBear";
 import { EthereumLogo } from "../components/EthereumLogo";
 import { Clients } from "../config/config";
@@ -26,10 +26,10 @@ export default function Home() {
   const theme = useMantineTheme();
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-start scrollbar-thin scrollbar-thumb-gray-900/80 scrollbar-track-gray-100 px-2">
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full m-0">
         <div className="flex items-center justify-between p-2 px-4 text-4xl">
           <EthereumLogo/>
-          <h1 className="px-3 text-xl sm:text-5xl md:text-6xl cursor-default">Execution-Layer</h1>
+          <h1 className="px-3 text-xl sm:text-5xl md:text-6xl font-light uppercase tracking-widest opacity-5 cursor-default">Execution-Layer</h1>
 
           <div className="flex items-center space-x-2">
             <div className="text-xl hidden">
@@ -61,56 +61,66 @@ export default function Home() {
             {Clients.map((client, i) => (
               <div
                 key={i}
-                className="col-span-2 flex h-full flex-col items-center justify-center p-2 sm:col-span-1"
+                className="col-span-2 p-2 flex h-full flex-col items-center justify-center sm:col-span-1"
               >
-                <div className="relative flex h-full w-full flex-col items-start justify-between overflow-clip rounded border border-zinc-200 bg-zinc-200/20 p-4 backdrop-blur-lg">
+                <div className="relative flex h-full w-full flex-col items-start justify-between overflow-clip rounded border border-zinc-200 bg-zinc-200/10 p-4 backdrop-blur-lg">
                   <div className="relative flex justify-center w-full items-center">
                     <img
                       src={client.img}
                       alt=""
                       className={
                         client.name == "Geth"
-                          ? "object-fit absolute top-0 left-0 z-[-10] flex h-[50vh] scale-50 opacity-75"
-                          : "object-contain absolute top-0 left-4 z-[-10] opacity-75"
+                          ? "object-fit absolute top-0 left-0 z-[-10] flex h-[50vh] scale-50 opacity-[10%]"
+                          : "object-contain absolute top-0 left-4 z-[-10] opacity-[10%]"
                       }
                     />
                   </div>
                   <div className="z-20 flex">
-                    <Link href={client.twitter} className="text-2xl sm:text-4xl md:text-6xl cursor-pointer font-bold no-underline">
+                    <Link href={client.twitter} className="client-name">
                       {client.name}
                     </Link>
                   </div>
-                  <div className="z-20 grid w-full grid-cols-2 items-center text-base text-purple-500 sm:text-lg md:grid-cols-2 md:text-xl lg:grid-cols-2">
-                    <div className="relative flex items-center justify-start text-xs transition-all duration-150 ease-in-out hover:scale-[1.02] md:justify-start md:text-xl">
+                  <div className="z-20 grid w-full max-w-[80%] lg:max-w-[100%] grid-cols-2 items-center text-base  visited:text-red-500 sm:text-lg md:grid-cols-2 md:text-xl lg:grid-cols-2">
+                    <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.github} className="no-underline sm:text-lg md:text-xl">
+                        <a href={client.github} className="card-option-text">
                           {"Github"}
                         </a>
                         <CodeBracketIcon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="relative flex items-center justify-start text-xs transition-all duration-150 ease-in-out hover:scale-[1.02] md:justify-start md:text-xl">
+                    <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.docs} className="no-underline sm:text-lg md:text-xl">
+                        <a href={client.docs} className="card-option-text">
                           {"Documentation"}
                         </a>
                         <BookOpenIcon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="relative flex items-center justify-start text-xs transition-all duration-150 ease-in-out hover:scale-[1.02] md:justify-start md:text-xl">
+                    <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.status} className="no-underline sm:text-lg md:text-xl">
+                        <a href={client.status} className="card-option-text">
                           {"Status"}
                         </a>
-                        <BookOpenIcon className="h-4 w-4" />
+                        <ClipboardDocumentIcon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="relative flex items-center justify-start text-xs transition-all duration-150 ease-in-out hover:scale-[1.02] md:justify-start md:text-xl">
+                    <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <a href={client.contact} className="no-underline sm:text-lg md:text-xl">
+                        <a href={client.contact} className="card-option-text">
                           {"Contact"}
                         </a>
                         <ChatBubbleLeftRightIcon className="h-4 w-4" />
+                      </div>
+                    </div>
+                    <div className="card-option col-span-2">
+                      <div className="flex items-center space-x-2">
+                        <p className="card-option-text font-light">
+                          Supports:
+                        </p>
+                        <p className="card-option-text text-[12px] md:text-lg font-light w-full break-text">
+                          {client.supports}
+                        </p>
                       </div>
                     </div>
                   </div>
