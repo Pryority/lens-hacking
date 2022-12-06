@@ -100,7 +100,7 @@ export default function Home() {
     // <div className={`flex flex-col items-center min-h-screen relative bg-gradient-to-bl from-blue-500 via-teal-500 to-lime-500`}>
     <div className="container">
       <div className="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-start scrollbar-thin scrollbar-thumb-gray-900/80 scrollbar-track-gray-100 px-8">
-        <div className="flex w-full items-center justify-between p-2 px-4 text-4xl font-extrabold outline outline-[1.62px] outline-stone-50/50">
+        <div className="flex w-full items-center justify-between p-2 px-4 text-4xl font-extrabold">
           <Text
             variant="gradient"
             gradient={{ from: "lime", to: "cyan", deg: 45 }}
@@ -186,7 +186,7 @@ export default function Home() {
 
         <div className="container">
           <h1 className="px-3 text-4xl sm:text-5xl md:text-6xl cursor-default">Execution-Layer</h1>
-          <div className="bg-brown-500 grid h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {Clients.map((client, i) => (
               <div
                 key={i}
@@ -271,15 +271,9 @@ export default function Home() {
           </div>
         </div>
         <ExecutionBear />
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:space-x-2 p-3">
+        <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 w-full md:space-x-2 p-3">
           <CreatePost/>
-          <Card withBorder>
-            <Stack spacing="md">
-              <Title variant="gradient" gradient={{ from: "violet", to: "teal", deg: 45 }} order={2}>
-                Comments
-              </Title>
-            </Stack>
-          </Card>
+          <PublicationsCard/>
         </div>
       </div>
     </div>

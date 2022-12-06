@@ -51,12 +51,14 @@ export default function CreatePost() {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleCreatePost)} className="w-full">
+    <form onSubmit={form.onSubmit(handleCreatePost)} className="">
       <Card withBorder>
         <Stack spacing="md">
-          <Title variant="gradient" gradient={{ from: "violet", to: "teal", deg: 45 }} order={2}>
+          
+          <h2 className="m-0 text-base md:text-2xl leading-5 bg-clip-text text-transparent bg-gradient-to-t from-purple-400 via-violet-500 to-teal-500">
             Leave a Comment
-          </Title>
+          </h2>
+          
           <TextInput
             label="ProfileID"
             placeholder="0x530a"
