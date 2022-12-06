@@ -150,7 +150,7 @@ export default function Home() {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 h-screen bg-brown-500'>
             {Clients.map((client, i)=>(
               <div key={i} className="p-2 col-span-2 sm:col-span-1 h-full justify-center items-center flex flex-col">
-                <div className='flex flex-col p-4 w-full items-start h-full overflow-clip justify-start relative bg-zinc-200/20 backdrop-blur-lg border border-zinc-200 rounded'>
+                <div className='flex flex-col p-4 w-full items-start h-full overflow-clip justify-between relative bg-zinc-200/20 backdrop-blur-lg border border-zinc-200 rounded'>
                     <div className='relative flex w-screen justify-center'>
                       <img src={client.img}  alt="" className={client.name == 'Geth' ? 'absolute z-10 opacity-75 top-0 left-0 h-[50vh] object-fit scale-50 flex' : 'absolute z-10 object-fit top-0 left-4 opacity-75'}/>
                     </div>
@@ -192,6 +192,19 @@ export default function Home() {
                         </div>
                       </div>
                       </Text>
+                      
+                  </div>
+                  <div className='flex w-full justify-end items-center'>
+                    <Text
+                      sx={{ fontFamily: 'Greycliff CF, sans-serif' }}
+                      color={dark ? 'teal' : 'green'}
+                    >
+                    <div className='flex w-full text-xs items-center'>
+                      <div className='flex'>
+                        <a href={client.donate} className='font-medium no-underline'>{"Donate"}</a>
+                      </div>
+                    </div>
+                    </Text>
                   </div>
                 </div>
               </div>
