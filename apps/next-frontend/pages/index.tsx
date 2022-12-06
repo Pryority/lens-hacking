@@ -69,8 +69,8 @@ export default function Home() {
                       alt=""
                       className={
                         client.name == "Geth"
-                          ? "object-fit absolute top-0 left-0 z-10 flex h-[50vh] scale-50 opacity-75"
-                          : "object-fit absolute top-0 left-4 z-10 opacity-75"
+                          ? "object-fit absolute top-0 left-0 z-[-10] flex h-[50vh] scale-50 opacity-75"
+                          : "object-fit absolute top-0 left-4 z-[-10] opacity-75"
                       }
                     />
                   </div>
