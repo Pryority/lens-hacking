@@ -7,14 +7,14 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "generate": "graphql-codegen",
     "predev": "yarn generate",
-    "prebuild": "yarn generate",
     "dev": "turbo run dev",
-    "build": "turbo run build",
+    "build": "cd apps/next-frontend && yarn build",
     "start": "turbo run start",
     "lint": "turbo run lint",
     "clean": "turbo run clean"
