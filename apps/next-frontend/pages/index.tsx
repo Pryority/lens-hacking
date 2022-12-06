@@ -99,49 +99,43 @@ export default function Home() {
                     </div>
                     <div className="card-option">
                       <div className="flex items-center space-x-2">
-                        <Link href={client.status} className="card-option-text">
-                          {"Status"}
-                        </Link>
-                        <ClipboardDocumentIcon className="h-4 w-4" />
-                      </div>
-                    </div>
-                    <div className="card-option">
-                      <div className="flex items-center space-x-2">
                         <Link href={client.contact} className="card-option-text">
                           {"Contact"}
                         </Link>
                         <ChatBubbleLeftRightIcon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="col-span-2">
-                      <div className="flex items-center space-x-2">
-                        <p className="card-option-text font-light">
+                  </div>
+                  <div className="flex flex-col w-full items-center justify-center z-20">
+                    <div className="flex flex-col w-full space-y-[-8px] sm:space-y-[-4px] md:space-y-[-2px]">
+                      <div className="col-span-2">
+                        <div className="flex items-center space-x-2">
+                          <p className="card-option-text m-0 p-0 font-light text-[12px] sm:text-base lg:text-lg">
+                            {"Status:"}
+                          </p>
+                          <p className="card-option-text capitalize m-0 p-0 font-light w-full break-text text-[12px] sm:text-base lg:text-lg">
+                            {client.status}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-span-2">
+                        <div className="flex items-center space-x-2">
+                          <p className="card-option-text m-0 p-0 font-light text-[12px] sm:text-base lg:text-lg">
                           Supports:
-                        </p>
-                        <p className="card-option-text text-[12px] md:text-lg font-light w-full break-text">
-                          {client.supports}
-                        </p>
+                          </p>
+                          <p className="card-option-text m-0 p-0 font-light w-full break-text text-[12px] sm:text-base lg:text-lg">
+                            {client.supports}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  {/* <div className="py-4 flex w-full">
-                    <div className="outline p-2 rounded-sm flex w-full">
-                      <Text
-                        sx={{ fontFamily: "Greycliff CF, sans-serif" }}
-                        color={dark ? "yellow" : "blue"}
-                      >
-                        <p className="font-medium text-base leading-[18px] m-0 flex break-all h-fit">{client.installation}</p>
-                      </Text>
-                    </div>
-                  </div> */}
-                  <div className="flex w-full items-center justify-center z-20">
                     <Text
                       sx={{ fontFamily: "Greycliff CF, sans-serif" }}
                       color={dark ? "teal" : "green"}
                     >
                       <div className="flex items-center text-xs">
                         <div className="flex">
-                          <a href={client.donate} className="font-medium pt-2 sm:pt-4 md:pt-8 hover:text-lime-500 transition-all ease-in-out duration-150 tracking-wider text-base sm:text-lg md:text-2xl uppercase no-underline">
+                          <a href={client.donate} className="font-medium pt-2 sm:pt-4 md:pt-8 text-green-500 visited:text-green-500 hover:text-lime-500 transition-all ease-in-out duration-150 tracking-wider text-base sm:text-lg md:text-2xl uppercase no-underline">
                             {"Donate"}
                           </a>
                         </div>
