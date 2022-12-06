@@ -1,4 +1,4 @@
-import { useUnfollow } from "@lenskit/react";
+import { useUnfollow } from "../../../lenskit-react";
 import { Alert, Button, Card, Input, Stack, Title } from "@mantine/core";
 import { useState } from "react";
 

@@ -1,4 +1,4 @@
-import { PublicationMainFocus, useComment } from "@lenskit/react";
+import { PublicationMainFocus, useComment } from "../../../lenskit-react";
 import { Alert, Button, Card, Stack, TextInput, Title } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { v4 as uuidv4 } from "uuid";

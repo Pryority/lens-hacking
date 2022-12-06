@@ -1,4 +1,4 @@
-import { usePublication } from "@lenskit/react";
+import { usePublication } from "../../../lenskit-react";
 import {
   Alert,
   Avatar,

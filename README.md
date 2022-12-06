@@ -5,7 +5,7 @@ lenskit is a set of libraries for integrating lens protocol into your applicatio
 ## Installation
 
 ```bash
-yarn add @lenskit/react
+yarn add ../../../lenskit-react
 ```
 
 > **Warning**

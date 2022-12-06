@@ -1,4 +1,4 @@
-import { PublicationTypes, usePublications } from "@lenskit/react";
+import { PublicationTypes, usePublications } from "../../../lenskit-react";
 import { Carousel } from "@mantine/carousel";
 import {
   Alert,

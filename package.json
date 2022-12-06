@@ -2,7 +2,7 @@
   "name": "execution-layer",
   "version": "0.0.0",
   "description": "A website about execution-related information for Ethereum",
-  "main": "index.js",
+  "main": "./apps/next-frontend/pages/index.tsx",
   "repository": "https://github.com/pryority/lens-hacking",
   "license": "MIT",
   "private": true,
@@ -11,8 +11,6 @@
     "packages/*"
   ],
   "scripts": {
-    "generate": "graphql-codegen",
-    "predev": "yarn generate",
     "dev": "turbo run dev",
     "build": "turbo run build",
     "start": "turbo run start",

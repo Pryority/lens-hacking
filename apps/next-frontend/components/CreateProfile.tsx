@@ -1,4 +1,4 @@
-import { useCreateProfile } from "@lenskit/react";
+import { useCreateProfile } from "../../../lenskit-react";
 import { Button, Stack } from "@mantine/core";
 import { useEffect, useState } from "react";
 

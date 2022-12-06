@@ -1,4 +1,4 @@
-import { LensKitProvider } from "@lenskit/react";
+import { LensKitProvider } from "../../../lenskit-react";
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from "@mantine/core";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";

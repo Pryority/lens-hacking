@@ -1,4 +1,4 @@
-import { useMirror } from "@lenskit/react";
+import { useMirror } from "../../../lenskit-react";
 import { Alert, Button, Card, Stack, TextInput, Title } from "@mantine/core";
 import { useForm } from "@mantine/form";
 

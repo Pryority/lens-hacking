@@ -1,4 +1,4 @@
-import { useProfile } from "@lenskit/react";
+import { useProfile } from "../../../lenskit-react";
 import { Alert, Avatar, Card, Group, Loader, Stack, Text, TextInput, Title } from "@mantine/core";
 import { useEffect, useState } from "react";
 
