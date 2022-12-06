@@ -111,14 +111,16 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
-                  <Text
-                    sx={{ fontFamily: "Greycliff CF, sans-serif" }}
-                    color={dark ? "yellow" : "blue"}
-                  >
-                    <p className="font-medium outline p-2 rounded-sm">{client.installation}</p>
-                  </Text>
-
+                  <div className="py-4 flex w-full">
+                    <div className="outline p-2 rounded-sm flex w-full">
+                      <Text
+                        sx={{ fontFamily: "Greycliff CF, sans-serif" }}
+                        color={dark ? "yellow" : "blue"}
+                      >
+                        <p className="font-medium text-base leading-[18px] m-0 flex break-all h-fit">{client.installation}</p>
+                      </Text>
+                    </div>
+                  </div>
                   <div className="flex w-full items-center justify-center z-20">
                     <Text
                       sx={{ fontFamily: "Greycliff CF, sans-serif" }}
