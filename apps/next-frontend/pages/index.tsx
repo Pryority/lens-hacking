@@ -113,7 +113,7 @@ export default function Home() {
                         <ChatBubbleLeftRightIcon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="card-option col-span-2">
+                    <div className="col-span-2">
                       <div className="flex items-center space-x-2">
                         <p className="card-option-text font-light">
                           Supports:
