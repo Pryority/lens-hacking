@@ -2,7 +2,7 @@
   "name": "execution-layer",
   "version": "0.0.0",
   "description": "A website about execution-related information for Ethereum",
-  "main": "./apps/next-frontend/pages/index.tsx",
+  "main": "index.js",
   "repository": "https://github.com/pryority/lens-hacking",
   "license": "MIT",
   "private": true,
