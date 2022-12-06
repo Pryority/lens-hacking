@@ -1,14 +1,13 @@
 {
-  "name": "lenskit",
+  "name": "execution-layer",
   "version": "0.0.0",
-  "description": "LensKit UI components for the Lens Protocol",
-  "main": "index.js",
-  "repository": "https://github.com/daoleno/lenskit",
+  "description": "A website about execution-related information for Ethereum",
+  "main": "./apps/next-frontend/pages/index.tsx",
+  "repository": "https://github.com/pryority/lens-hacking",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ],
   "scripts": {
     "generate": "graphql-codegen",
