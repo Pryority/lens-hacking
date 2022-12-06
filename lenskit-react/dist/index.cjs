@@ -693,7 +693,6 @@ var Flex2 = styled_default("div", {
   justifyContent: "space-between",
   borderRadius: 6,
   padding: 12,
-  "&:hover": { boxShadow: `0 0 0 2px ${import_colors2.lime.lime6}` }
 });
 var ListItem = ({ children, icon, title, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", {
   children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Flex2, {

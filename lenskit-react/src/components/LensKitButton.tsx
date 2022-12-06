@@ -227,7 +227,6 @@ const Flex = styled('div', {
   justifyContent: 'space-between',
   borderRadius: 6,
   padding: 12,
-  '&:hover': { boxShadow: `0 0 0 2px ${lime.lime6}` },
 })
 
 const ListItem = ({ children, icon, title, ...props }: any) => (
@@ -253,7 +252,6 @@ const ListItemLink = styled('a', {
   borderRadius: 6,
   fontSize: 15,
   lineHeight: 1,
-  // '&:hover': { boxShadow: `0 0 0 2px ${lime.lime6}` },
 })
 
 const ListItemIcon = styled('div', {

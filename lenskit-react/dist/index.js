@@ -1,5 +1,4 @@
 // src/components/LensKitButton.tsx
-import { blackA as blackA2, lime } from "@radix-ui/colors";
 import {
   ArchiveIcon,
   AvatarIcon,
@@ -592,32 +591,6 @@ function LensKitButton() {
     ]
   });
 }
-var Button2 = styled_default("button", {
-  all: "unset",
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: 12,
-  padding: "0 15px",
-  fontSize: 15,
-  lineHeight: 1,
-  fontWeight: 500,
-  height: 35,
-  cursor: "pointer",
-  variants: {
-    variant: {
-      lime: {
-        backgroundColor: "$lime",
-        color: "$basil",
-        boxShadow: `0 2px 10px ${blackA2.blackA7}`,
-        "&:hover": { boxShadow: `0 2px 10px ${blackA2.blackA8}` }
-      }
-    }
-  },
-  defaultVariants: {
-    variant: "lime"
-  }
-});
 var Portal3 = styled_default(Popover.Portal, {
   position: "absolute",
   left: "50%",
@@ -630,12 +603,7 @@ var Portal3 = styled_default(Popover.Portal, {
   "@sm": { paddingX: 0 },
   "@lg": { maxWidth: 600 }
 });
-var Content3 = styled_default(Popover.Content, {
-  backgroundColor: "$peas",
-  overflow: "hidden",
-  borderRadius: 12,
-  boxShadow: `0 2px 10px ${blackA2.blackA7}`
-});
+
 var List = styled_default("ul", {
   display: "grid",
   padding: 22,
@@ -649,7 +617,6 @@ var Flex2 = styled_default("div", {
   justifyContent: "space-between",
   borderRadius: 6,
   padding: 12,
-  "&:hover": { boxShadow: `0 0 0 2px ${lime.lime6}` }
 });
 var ListItem = ({ children, icon, title, ...props }) => /* @__PURE__ */ jsx2("li", {
   children: /* @__PURE__ */ jsxs2(Flex2, {
