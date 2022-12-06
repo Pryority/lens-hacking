@@ -4,6 +4,10 @@ import {
   Flex,
   SimpleGrid,
   Text,
+  Card,
+  Stack,
+  Title,
+  TextInput,
   useMantineColorScheme,
   useMantineTheme,
 } from "@mantine/core";
@@ -267,6 +271,16 @@ export default function Home() {
           </div>
         </div>
         <ExecutionBear />
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:space-x-2 p-3">
+          <CreatePost/>
+          <Card withBorder>
+            <Stack spacing="md">
+              <Title variant="gradient" gradient={{ from: "violet", to: "teal", deg: 45 }} order={2}>
+                Comments
+              </Title>
+            </Stack>
+          </Card>
+        </div>
       </div>
     </div>
   );

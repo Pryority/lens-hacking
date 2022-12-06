@@ -10,16 +10,16 @@ export default function CreatePost() {
       version: "2.0.0",
       mainContentFocus: PublicationMainFocus.TEXT_ONLY,
       metadata_id: uuidv4(),
-      description: "lenskit publication",
+      description: "",
       locale: "en-US",
       content:
-        "Publications are the lifeblood of the Lens Protocol. They are all of the original content, comments, and mirrors produced by creators, curators, and users alike. Publications come in three primary types: posts, comments, and mirrors. Posts are the base object, with mirror and comment providing additional functionality. ",
+        "",
       external_url: "https://github.com/daoleno/lenskit",
       image: null,
       imageMimeType: null,
-      name: "lenskit",
+      name: "",
       attributes: [],
-      tags: ["lenskit"],
+      tags: [""],
       appId: "lenskit-github",
       profileId: "0x530a",
     },
@@ -51,45 +51,45 @@ export default function CreatePost() {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleCreatePost)}>
+    <form onSubmit={form.onSubmit(handleCreatePost)} className="w-full">
       <Card withBorder>
         <Stack spacing="md">
-          <Title variant="gradient" gradient={{ from: "lime", to: "cyan", deg: 45 }} order={2}>
-            Create Post
+          <Title variant="gradient" gradient={{ from: "violet", to: "teal", deg: 45 }} order={2}>
+            Leave a Comment
           </Title>
           <TextInput
             label="ProfileID"
             placeholder="0x530a"
             required
-            {...form.getInputProps("profileId")}
           />
-          <TextInput label="Name" placeholder="lenskit" required {...form.getInputProps("name")} />
+          <TextInput label="Name" placeholder="Enter your name" required {...form.getInputProps("name")} />
           <TextInput
-            label="Description"
-            placeholder="lenskit playground"
+            label="Tags"
+            placeholder="Tags can be used in the future for filtering posts (eg, 'lenskit', 'DIY')"
             required
             {...form.getInputProps("description")}
           />
           <TextInput
-            label="Content"
-            placeholder="lenskit playground"
+            label="External URL"
+            placeholder="Enter an external URL to link your post to"
+            {...form.getInputProps("external_url")}
+          />
+          <TextInput
+            label="Comment"
+            placeholder="Leave your comment here"
             required
             {...form.getInputProps("content")}
           />
-          <TextInput
-            label="External URL"
-            placeholder="lenskit playground"
-            {...form.getInputProps("external_url")}
-          />
           <Button
             variant="gradient"
-            gradient={{ from: "lime", to: "cyan", deg: 45 }}
+            gradient={{ from: "violet", to: "cyan", deg: 45 }}
             w="full"
             type="submit"
             loading={loading && !error}
           >
             Submit
           </Button>
+          <h3 className="font-light m-0 text-xs text-center"> Only a Profile ID is required to leave a comment.</h3>
           {error && <Alert color="red">{error.message}</Alert>}
           {publicationId && (
             <Alert color="green" title="Publication ID">
