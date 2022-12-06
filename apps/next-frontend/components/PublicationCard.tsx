@@ -1,4 +1,4 @@
-import { usePublication } from '@lenskit/react'
+import { usePublication } from "@lenskit/react";
 import {
   Alert,
   Avatar,
@@ -11,20 +11,20 @@ import {
   Stack,
   Text,
   Title,
-} from '@mantine/core'
-import { useEffect, useState } from 'react'
+} from "@mantine/core";
+import { useEffect, useState } from "react";
 
 export function PublicationCard() {
-  const [publicationId, setPublicationId] = useState('0x530a-0x07')
-  const { publication, loading, error } = usePublication(publicationId)
+  const [publicationId, setPublicationId] = useState("0x530a-0x07");
+  const { publication, loading, error } = usePublication(publicationId);
   useEffect(() => {
-    console.log('publication', publication)
-  }, [publication])
+    console.log("publication", publication);
+  }, [publication]);
 
   return (
     <Card withBorder radius="md">
       <Stack>
-        <Title variant="gradient" gradient={{ from: 'lime', to: 'cyan', deg: 45 }} order={3}>
+        <Title variant="gradient" gradient={{ from: "lime", to: "cyan", deg: 45 }} order={3}>
           Publication Card
         </Title>
         <Input
@@ -35,7 +35,7 @@ export function PublicationCard() {
           <Card withBorder radius="md">
             <Card.Section>
               <a>
-                <Image src={'cover.jpeg'} height={180} alt="" />
+                <Image src={"cover.jpeg"} height={180} alt="" />
               </a>
             </Card.Section>
 
@@ -61,5 +61,5 @@ export function PublicationCard() {
         {error && <Alert color="red">{error.message}</Alert>}
       </Stack>
     </Card>
-  )
+  );
 }

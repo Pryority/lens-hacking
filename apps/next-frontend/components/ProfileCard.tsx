@@ -1,19 +1,19 @@
-import { useProfile } from '@lenskit/react'
-import { Alert, Avatar, Card, Group, Loader, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useEffect, useState } from 'react'
+import { useProfile } from "@lenskit/react";
+import { Alert, Avatar, Card, Group, Loader, Stack, Text, TextInput, Title } from "@mantine/core";
+import { useEffect, useState } from "react";
 
 export default function ProfileCard() {
-  const [profileId, setProfileId] = useState('0x530a')
-  const { profile, loading, error } = useProfile(profileId)
+  const [profileId, setProfileId] = useState("0x530a");
+  const { profile, loading, error } = useProfile(profileId);
 
   useEffect(() => {
-    console.log('profile', profile)
-  }, [profile])
+    console.log("profile", profile);
+  }, [profile]);
 
   return (
     <Card p="lg" radius="md" withBorder>
       <Stack>
-        <Title variant="gradient" gradient={{ from: 'lime', to: 'cyan', deg: 45 }} order={3}>
+        <Title variant="gradient" gradient={{ from: "lime", to: "cyan", deg: 45 }} order={3}>
           Query Profile
         </Title>
         <TextInput
@@ -24,9 +24,9 @@ export default function ProfileCard() {
 
         {profile && (
           <Group>
-            <Avatar src={'/lens/lens-logo.svg'} size={94} radius="md" />
+            <Avatar src={"/lens/lens-logo.svg"} size={94} radius="md" />
             <div>
-              <Text size="xs" sx={{ textTransform: 'uppercase' }} weight={700} color="dimmed">
+              <Text size="xs" sx={{ textTransform: "uppercase" }} weight={700} color="dimmed">
                 {profile.name}
               </Text>
 
@@ -52,9 +52,9 @@ export default function ProfileCard() {
         {error && <Alert color="red">Error: {error.message}</Alert>}
       </Stack>
     </Card>
-  )
+  );
 }
 
 function shortAddress(address: string) {
-  return `${address.slice(0, 6)}...${address.slice(-4)}`
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
 }

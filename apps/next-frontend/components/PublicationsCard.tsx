@@ -1,5 +1,5 @@
-import { PublicationTypes, usePublications } from '@lenskit/react'
-import { Carousel } from '@mantine/carousel'
+import { PublicationTypes, usePublications } from "@lenskit/react";
+import { Carousel } from "@mantine/carousel";
 import {
   Alert,
   Avatar,
@@ -12,20 +12,20 @@ import {
   Stack,
   Text,
   Title,
-} from '@mantine/core'
-import { useEffect, useState } from 'react'
+} from "@mantine/core";
+import { useEffect, useState } from "react";
 
 export function PublicationsCard() {
-  const [profileId, setProfileId] = useState('0x530a')
-  const { publications, loading, error } = usePublications(profileId, [PublicationTypes.Post])
+  const [profileId, setProfileId] = useState("0x530a");
+  const { publications, loading, error } = usePublications(profileId, [PublicationTypes.Post]);
   useEffect(() => {
-    console.log('publications', publications)
-  }, [publications])
+    console.log("publications", publications);
+  }, [publications]);
 
   return (
     <Card withBorder radius="md">
       <Stack>
-        <Title variant="gradient" gradient={{ from: 'lime', to: 'cyan', deg: 45 }} order={3}>
+        <Title variant="gradient" gradient={{ from: "lime", to: "cyan", deg: 45 }} order={3}>
           Publications
         </Title>
         <Input placeholder="0x530a" onChange={(e: any) => setProfileId(e.currentTarget.value)} />
@@ -37,7 +37,7 @@ export function PublicationsCard() {
                 <Card withBorder radius="md">
                   <Card.Section>
                     <a>
-                      <Image src={'cover.jpeg'} height={180} alt="" />
+                      <Image src={"cover.jpeg"} height={180} alt="" />
                     </a>
                   </Card.Section>
 
@@ -68,5 +68,5 @@ export function PublicationsCard() {
         {error && <Alert color="red">{error.message}</Alert>}
       </Stack>
     </Card>
-  )
+  );
 }
