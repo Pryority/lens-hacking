@@ -16,7 +16,7 @@
     "start": "turbo run start",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "export": "cd apps/frontend && yarn export"
+    "export": "cd apps/next-frontend && yarn export"
   },
   "prettier": {
     "printWidth": 100,
