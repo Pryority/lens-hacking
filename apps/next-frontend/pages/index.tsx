@@ -18,6 +18,7 @@ import { BookOpenIcon, ChatBubbleLeftRightIcon, CodeBracketIcon } from "@heroico
 import { ExecutionBear } from "../components/ExecutionBear";
 import { EthereumLogo } from "../components/EthereumLogo";
 import { Clients } from "../config/config";
+import Link from "next/link";
 
 export default function Home() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -75,7 +76,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="z-20 flex">
-                    <h2 className="text-2xl sm:text-4xl md:text-6xl cursor-default">{client.name}</h2>
+                    <Link href={client.twitter} className="text-2xl sm:text-4xl md:text-6xl cursor-pointer font-bold no-underline">
+                      {client.name}
+                    </Link>
                   </div>
                   <div className="z-20 grid w-full grid-cols-2 items-center text-base text-purple-500 sm:text-lg md:grid-cols-2 md:text-xl lg:grid-cols-2">
                     <div className="relative flex items-center justify-start text-xs transition-all duration-150 ease-in-out hover:scale-[1.02] md:justify-start md:text-xl">
@@ -128,7 +131,7 @@ export default function Home() {
                     >
                       <div className="flex items-center text-xs">
                         <div className="flex">
-                          <a href={client.donate} className="font-medium pt-2 sm:pt-4 md:pt-8 tracking-wider text-base sm:text-lg md:text-2xl uppercase no-underline">
+                          <a href={client.donate} className="font-medium pt-2 sm:pt-4 md:pt-8 hover:text-lime-500 transition-all ease-in-out duration-150 tracking-wider text-base sm:text-lg md:text-2xl uppercase no-underline">
                             {"Donate"}
                           </a>
                         </div>

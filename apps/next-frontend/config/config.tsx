@@ -8,6 +8,7 @@ export const Clients = [
     supports: "Linux, Win, macOS",
     donate: "https://gitcoin.co/grants/142/nethermind",
     img: "https://nethermind.io/wp-content/uploads/2022/04/Logo-icon.svg",
+    twitter: "https://twitter.com/nethermindeth"
   },
   {
     name: "Erigon",
@@ -18,6 +19,7 @@ export const Clients = [
     supports: "Linux, Win, macOS, ARM",
     donate: "https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816",
     img: "",
+    twitter: "https://twitter.com/ErigonEth"
   },
   {
     name: "Besu",
@@ -28,6 +30,7 @@ export const Clients = [
     supports: "Linux, Win, macOS",
     donate: "https://protocol-guild.readthedocs.io/en/latest/index.html",
     img: "https://www.hyperledger.org/wp-content/uploads/2021/10/hyperledgerfoundation_horizontal-dark.svg",
+    twitter: "https://twitter.com/HyperledgerBesu"
   },
   {
     name: "Geth",
@@ -38,5 +41,6 @@ export const Clients = [
     supports: "Linux, Win, macOS, ARM",
     donate: "https://gitcoin.co/grants/6128/go-ethereum-geth",
     img: "https://geth.ethereum.org/static/images/mascot.png",
+    twitter: "https://twitter.com/go_ethereum"
   },
 ];
