@@ -11,6 +11,7 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from "@mantine/core";
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from "react-twitter-embed";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { IconBook, IconMoonStars, IconSun } from "@tabler/icons";
 import { useState } from "react";
@@ -25,11 +26,11 @@ export default function Home() {
   const dark = colorScheme === "dark";
   const theme = useMantineTheme();
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-start scrollbar-thin scrollbar-thumb-gray-900/80 scrollbar-track-gray-100 px-2">
+    <div className="flex min-h-screen w-full flex-col items-center justify-start md:scrollbar-thin md:scrollbar-thumb-gray-900/80 md:scrollbar-track-gray-100 px-2">
       <div className="flex flex-col w-full m-0">
         <div className="flex items-center justify-between p-2 px-4 text-4xl">
           <EthereumLogo/>
-          <h1 className="px-3 text-xl sm:text-5xl md:text-6xl font-light uppercase tracking-widest opacity-5 cursor-default">Execution-Layer</h1>
+          <h1 className="px-3 text-base sm:text-3xl md:text-6xl font-light uppercase tracking-widest opacity-5 cursor-default">Execution-Layer</h1>
 
           <div className="flex items-center space-x-2">
             <div className="text-xl hidden">
@@ -56,8 +57,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="grid h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="flex flex-col items-center min-h-screen">
+          <div className="grid min-h-screen grid-cols-1 sm:grid-cols-2 relative ">
             {Clients.map((client, i) => (
               <div
                 key={i}
@@ -146,12 +147,47 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <ExecutionBear />
+
+          <h2 className={`uppercase tracking-[16px] text-base sm:text-[16px] md:text-lg bg-clip-text text-transparent bg-gradient-to-bl ${dark ? " from-slate-900 via-stone-500" : "uppercase tracking-[16px] bg-clip-text text-transparent bg-gradient-to-bl from-stone-50 via-slate-200"}`}>
+                Community
+          </h2>
+
+          <div className="grid justify-center h-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+            <div className="flex w-full h-fit justify-center md:p-2">
+              <TwitterTweetEmbed
+                tweetId={"1600274426905251841"}
+              />
+            </div>
+            <div className="flex w-full h-fit justify-center md:p-2">
+            
+              <TwitterTweetEmbed
+                tweetId={"1599080156651741186"}
+              />
+            
+            </div>
+            <div className="flex w-full h-fit justify-center md:p-2">
+            
+              <TwitterTweetEmbed
+                tweetId={"1597532578872848385"}
+              />
+            
+            </div>
+            <div className="flex w-full h-fit justify-center md:p-2">
+            
+              <TwitterTweetEmbed
+                tweetId={"1588213672156995586"}
+              />
+            
+            </div>
+            <div className="flex w-full h-fit justify-center md:p-2">
+              <TwitterTweetEmbed
+                tweetId={"1597352375593078784"}
+              />
+            
+            </div>
+          </div>
         </div>
-        {/* <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 w-full md:space-x-2 p-3">
-          <CreatePost/>
-          <PublicationsCard/>
-        </div> */}
+        <ExecutionBear />
       </div>
     </div>
   );
