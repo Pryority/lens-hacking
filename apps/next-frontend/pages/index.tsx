@@ -4,6 +4,7 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from "@mantine/core";
+import Head from "next/head";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { IconMoonStars, IconSun } from "@tabler/icons";
@@ -22,6 +23,11 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-start md:scrollbar-thin md:scrollbar-thumb-gray-900/80 md:scrollbar-track-gray-100 px-2">
+      {/* <Head>
+        <title>Execution-Layer</title>
+        <meta name="description" content="Ethereum" />
+        <link rel="icon" href="/icon.png" />
+      </Head> */}
       <div className="flex flex-col w-full m-0">
         <div className="flex items-center justify-between p-2 px-4 text-4xl">
           <EthereumLogo/>
