@@ -1,4 +1,3 @@
-import { LensKitProvider } from "../../../lenskit-react";
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from "@mantine/core";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
@@ -35,9 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
         <WagmiConfig client={wagmiClient}>
           <RainbowKitProvider chains={chains}>
-            <LensKitProvider>
-              <Component {...pageProps} />
-            </LensKitProvider>
+            <Component {...pageProps} />
           </RainbowKitProvider>
         </WagmiConfig>
       </MantineProvider>

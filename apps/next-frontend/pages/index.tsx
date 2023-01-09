@@ -13,6 +13,7 @@ import { ExecutionBear } from "../components/ExecutionBear";
 import { EthereumLogo } from "../components/EthereumLogo";
 import { Clients } from "../config/config";
 import fuelLogo from "../public/fuel-labs-logo.png";
+import opLogo from "../public/op-logo.png";
 import celestiaLogo from "../public/celestia-logo.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,11 +24,6 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-start md:scrollbar-thin md:scrollbar-thumb-gray-900/80 md:scrollbar-track-gray-100 px-2">
-      {/* <Head>
-        <title>Execution-Layer</title>
-        <meta name="description" content="Ethereum" />
-        <link rel="icon" href="/icon.png" />
-      </Head> */}
       <div className="flex flex-col w-full m-0">
         <div className="flex items-center justify-between p-2 px-4 text-4xl">
           <EthereumLogo/>
@@ -149,10 +145,26 @@ export default function Home() {
             ))}
           </div>
 
-          <h2 className={`uppercase tracking-[16px] pt-16 text-base sm:text-[16px] md:text-lg bg-clip-text text-transparent bg-gradient-to-bl ${dark ? " from-slate-900 via-stone-500" : "uppercase tracking-[16px] bg-clip-text text-transparent bg-gradient-to-bl from-stone-50 via-slate-200"}`}>
-                Community
-          </h2>
+          <div className="flex flex-col pt-16 items-center h-[500px]">
+            <h2 className={`uppercase tracking-[16px] text-base sm:text-[16px] md:text-lg bg-clip-text text-transparent bg-gradient-to-bl ${dark ? " from-slate-900 via-stone-500" : "uppercase tracking-[16px] bg-clip-text text-transparent bg-gradient-to-bl from-stone-50 via-slate-200"}`}>
+              Modular
+            </h2>
+            <div className="flex items-center space-x-16 bg-gradient-to-br from-violet-900/10 via-purple-900/10 to-teal-900/10 p-4 sm:p-6 md:p-8 px-8 sm:px-12 md:px-16 rounded-full border border-slate-300 outline outline-slate-300">
+              <Link href={"https://www.fuel.network/"} className="">
+                <Image src={fuelLogo} alt="" className="w-16 h-16 md:w-40 md:h-40 hover:scale-[1.02] transition-all ease-in-out duration-300"/>
+              </Link>
+              <Link href={"https://op-geth.optimism.io/"} className="">
+                <Image src={opLogo} alt="" className="w-16 h-16 md:w-40 md:h-40 hover:scale-[1.02] transition-all ease-in-out duration-300"/>
+              </Link>
+              <Link href={"https://celestia.org/"} className="">
+                <Image src={celestiaLogo} alt="" className="w-16 h-16 md:w-40 md:h-40 hover:scale-[1.02] transition-all ease-in-out duration-300"/>
+              </Link>
+            </div>
+          </div>
 
+          <h2 className={`uppercase tracking-[16px] pt-16 text-base sm:text-[16px] md:text-lg bg-clip-text text-transparent bg-gradient-to-bl ${dark ? " from-slate-900 via-stone-500" : "uppercase tracking-[16px] bg-clip-text text-transparent bg-gradient-to-bl from-stone-50 via-slate-200"}`}>
+            Community
+          </h2>
           <div className="grid justify-center h-full sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
             <div className="flex w-full h-fit justify-center md:p-2">
               <TwitterTweetEmbed
@@ -160,40 +172,19 @@ export default function Home() {
               />
             </div>
             <div className="flex w-full h-fit justify-center md:p-2">
-            
               <TwitterTweetEmbed
                 tweetId={"1599080156651741186"}
               />
-            
             </div>
             <div className="flex w-full h-fit justify-center md:p-2">
-            
               <TwitterTweetEmbed
                 tweetId={"1597532578872848385"}
               />
-            
             </div>
             <div className="flex w-full h-fit justify-center md:p-2">
-            
               <TwitterTweetEmbed
                 tweetId={"1588213672156995586"}
               />
-            
-            </div>
-          </div>
-
-          <div className="flex flex-col pt-16 items-center h-[500px]">
-            <h2 className={`uppercase tracking-[16px] text-base sm:text-[16px] md:text-lg bg-clip-text text-transparent bg-gradient-to-bl ${dark ? " from-slate-900 via-stone-500" : "uppercase tracking-[16px] bg-clip-text text-transparent bg-gradient-to-bl from-stone-50 via-slate-200"}`}>
-              Modular
-            </h2>
-
-            <div className="flex items-center space-x-16 bg-gradient-to-br from-violet-900/40 via-purple-900/40 to-teal-900/40 p-4 sm:p-6 md:p-8 px-8 sm:px-12 md:px-16 rounded-2xl border border-slate-300 outline outline-slate-300">
-              <Link href={"https://www.fuel.network/"} className="">
-                <Image src={fuelLogo} alt="" className="w-16 h-16 md:w-40 md:h-40"/>
-              </Link>
-              <Link href={"https://celestia.org/"} className="">
-                <Image src={celestiaLogo} alt="" className="w-16 h-16 md:w-40 md:h-40"/>
-              </Link>
             </div>
           </div>
         </div>
