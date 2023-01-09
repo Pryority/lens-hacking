@@ -67,14 +67,12 @@ export default function Home() {
                       src={client.img}
                       alt=""
                       className={
-                        client.name == "Geth"
-                          ? "object-fit absolute top-0 left-0 z-[-10] flex h-[50vh] scale-50 opacity-[10%]"
-                          : "object-contain absolute top-0 left-4 z-[-10] opacity-[10%]"
+                        "object-contain absolute top-0 left-4 z-[-10] opacity-[10%]"
                       }
                     />
                   </div>
                   <div className="z-20 flex">
-                    <Link href={client.twitter} className="client-name">
+                    <Link href={client.site} className="client-name">
                       {client.name}
                     </Link>
                   </div>
