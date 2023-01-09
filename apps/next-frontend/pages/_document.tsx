@@ -9,7 +9,7 @@ export default class _Document extends Document {
   render() {
     return (
       <Html>
-        <title>Execution-Layer</title>
+        <title>Execution-Layer.eth</title>
         <Head>
           <meta name="description" content="Ethereum" />
           <link rel="icon" href="/icon.png" />
